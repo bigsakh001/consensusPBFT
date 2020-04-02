@@ -1,12 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"os"
-	"github.com/bigpicturelabs/consensusPBFT/pbft/network"
+
+	"github.com/bigsakh001/consensusPBFT/pbft/network"
 )
 
 func main() {
-	nodeID := os.Args[1]
+	fmt.Println("!************preparing to start********************")
+	nodeID := os.Args[0]
 	server := network.NewServer(nodeID)
 
 	server.Start()
